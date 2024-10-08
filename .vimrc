@@ -24,7 +24,7 @@ call plug#begin()
 " List your plugins here
 Plug 'SirVer/ultisnips'
 Plug 'lervag/vimtex'
-Plug 'girishji/vimcomplete'
+Plug 'ervandew/supertab'
 call plug#end()
 
 "                    "
