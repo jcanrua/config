@@ -6,13 +6,10 @@ snippet dale "note template" b
 \usepackage{textcomp}
 \usepackage[spanish]{babel}
 \usepackage{geometry}
-\geometry{top=2cm, bottom=2cm, left=2.5cm, right=2.5cm}        
+\geometry{margin = 2cm}        
 \usepackage{titlesec}          
 
-\titleformat{\section}{\large\bfseries}{}{0em}{}  
-\titleformat{\subsection}{\normalsize\bfseries}{}{0em}{}
-
-\title{${1:Title}}
+\title{${1:titulo}}
 \author{Jorge Canut}
 \date{\today}
 
@@ -63,17 +60,17 @@ endsnippet
 
 snippet enum "Enumerate list" b
 \begin{enumerate}
-  \item $1
+\item $1
 \end{enumerate}
 endsnippet
 
 snippet item "Itemised list" b
 \begin{itemize}
-  \item $1
+\item $1
 \end{itemize}
 endsnippet
 
-snippet it "Item line" i
+snippet it "Item line" b
 \item $1
 endsnippet
 
@@ -83,21 +80,20 @@ snippet des "Description" b
 \end{description}
 endsnippet
 
-snippet em "emphasize" i
+snippet em "emphasize" b
 \emph{$1}$0
 endsnippet
 
-snippet bo "bold" i
+snippet bo "bold" b
 \textbf{$1}$0
 endsnippet
 
-snippet ita "italic" i
+snippet ita "italic" b
 \textit{$1}$0
 endsnippet
 
 snippet fecha
 `date +"%m/%d/%Y"`
-endsnippet
 
 snippet box "Box"
 `!p snip.rv = '┌' + '─' * (len(t[1]) + 2) + '┐'`
@@ -105,5 +101,6 @@ snippet box "Box"
 `!p snip.rv = '└' + '─' * (len(t[1]) + 2) + '┘'`
 $0
 endsnippet
+
 
 
