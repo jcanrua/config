@@ -5,7 +5,6 @@ snippet dale "note template" b
 \usepackage[T1]{fontenc}
 \usepackage{textcomp}
 \usepackage[spanish]
-\usepackage{amsmath, amssymb}
 
 \title{${1:Title}}
 \author{Jorge Canut}
@@ -88,3 +87,17 @@ endsnippet
 snippet ita "italic" i
 \textit{$1}$0
 endsnippet
+
+snippet fecha
+`date +"%m/%d/%Y"`
+endsnippet
+
+snippet box "Box"
+`!p snip.rv = '┌' + '─' * (len(t[1]) + 2) + '┐'`
+│ $1 │
+`!p snip.rv = '└' + '─' * (len(t[1]) + 2) + '┘'`
+$0
+endsnippet
+
+
+

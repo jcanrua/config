@@ -12,7 +12,10 @@ filetype plugin on
 filetype indent on
 "                 "
 
-
+" COMANDOS "
+let mapleader = " "
+noremap <leader>U :call UltiSnips#RefreshSnippets()<CR>
+noremap <leader>c :write<CR>:VimtexCompile<CR>
 
 
 " PLUGINS "
@@ -25,13 +28,17 @@ call plug#end()
 
 "                    "
 
-"  SNIPPETS      "
+"  PLUGINS SNIPPETS      "I
 let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/UltiSnips']      
 let g:UltiSnipsExpandTrigger       = '<Tab>'    " use Tab to expand snippets
 let g:UltiSnipsJumpForwardTrigger  = '<Tab>'    " use Tab to move forward through tabstops
 let g:UltiSnipsJumpBackwardTrigger = '<S-Tab>'  " use Shift-Tab to move backward through tabstops
 
-
+let g:tex_flavor='latex'
+let g:vimtex_view_method='zathura'
+let g:vimtex_quickfix_mode=0
+set conceallevel=1
+let g:tex_conceal='abdmg'
 
 "
 
