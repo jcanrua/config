@@ -4,10 +4,17 @@ snippet dale "note template" b
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{textcomp}
-\usepackage[spanish]
+\usepackage[spanish]{babel}
+\usepackage{geometry}
+\geometry{top=2cm, bottom=2cm, left=2.5cm, right=2.5cm}        
+\usepackage{titlesec}          
+
+\titleformat{\section}{\large\bfseries}{}{0em}{}  
+\titleformat{\subsection}{\normalsize\bfseries}{}{0em}{}
 
 \title{${1:Title}}
 \author{Jorge Canut}
+\date{\today}
 
 \begin{document}
 
@@ -98,6 +105,5 @@ snippet box "Box"
 `!p snip.rv = '└' + '─' * (len(t[1]) + 2) + '┘'`
 $0
 endsnippet
-
 
 
