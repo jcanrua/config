@@ -1,13 +1,41 @@
+" BASICOS "
 set tabstop=4
 set shiftwidth=4
-set autoindent
 set number
+set encoding=utf-8
 set relativenumber
+syntax on
+colorscheme onedark
+set autoindent
+filetype on
+filetype plugin on
+filetype indent on
+"                 "
 
 
-"Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
-"If you're using tmux version 2.2 or later, you can remove the outermost $TMUX check and use tmux's 24-bit color support
-"(see < http://sunaku.github.io/tmux-24bit-color.html#usage > for more information.)
+
+
+" PLUGINS "
+call plug#begin()
+
+" List your plugins here
+Plug 'SirVer/ultisnips'
+Plug 'lervag/vimtex'
+call plug#end()
+
+"                    "
+
+"  SNIPPETS      "
+let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/UltiSnips']      
+let g:UltiSnipsExpandTrigger       = '<Tab>'    " use Tab to expand snippets
+let g:UltiSnipsJumpForwardTrigger  = '<Tab>'    " use Tab to move forward through tabstops
+let g:UltiSnipsJumpBackwardTrigger = '<S-Tab>'  " use Shift-Tab to move backward through tabstops
+
+
+
+"
+
+"  COLORSCHEME       "
 if (empty($TMUX))
   if (has("nvim"))
     "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
@@ -20,13 +48,6 @@ if (empty($TMUX))
     set termguicolors
   endif
 endif
+"                     "
 
 
-syntax on
-colorscheme onedark
-
-
-filetype plugin on
-set grepprg=grep\ -nH\ $*
-filetype indent on
-let g:tex_flavor='latex'

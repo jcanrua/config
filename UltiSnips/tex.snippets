@@ -1,0 +1,90 @@
+snippet dale "note template" b
+\documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage[spanish]
+\usepackage{amsmath, amssymb}
+
+\title{${1:Title}}
+\author{Jorge Canut}
+
+\begin{document}
+
+\maketitle
+
+$0
+
+\end{document}
+endsnippet
+
+
+snippet beg
+\begin{$1}
+
+$0
+
+\end{$1}
+endsnippet
+
+snippet sec "section{} and label{}" b
+\section{${1:SecName}} % (fold)
+\label{sec:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\l$1$2$3)/g}}}
+
+$0
+
+% section $2 (end)
+endsnippet
+
+snippet sub "subsection{} and label" b
+\subsection{${1:SubName}} % (fold)
+\label{sub:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\l$1$2$3)/g}}}
+
+$0
+
+% subsection $2 (end)
+endsnippet
+
+snippet subs "subsubsection{} and label" b
+\subsubsection{${1:SubsubName}} % (fold)
+\label{ssub:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\l$1$2$3)/g}}}
+
+$0
+
+% subsubsection $2 (end)
+endsnippet
+
+snippet enum "Enumerate list" b
+\begin{enumerate}
+  \item $1
+\end{enumerate}
+endsnippet
+
+snippet item "Itemised list" b
+\begin{itemize}
+  \item $1
+\end{itemize}
+endsnippet
+
+snippet it "Item line" i
+\item $1
+endsnippet
+
+snippet des "Description" b
+\begin{description}
+  \item[$1] $0
+\end{description}
+endsnippet
+
+snippet em "emphasize" i
+\emph{$1}$0
+endsnippet
+
+snippet bo "bold" i
+\textbf{$1}$0
+endsnippet
+
+snippet ita "italic" i
+\textit{$1}$0
+endsnippet
